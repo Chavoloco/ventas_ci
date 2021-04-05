@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <h2>SISTEMA DE VENTAS</h2>
+            <h2>NEO CORRALON</h2>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
@@ -42,16 +42,16 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
                     </div>
-                    <!-- /.col -->
+                    <!-- /end.col -->
                 </div>
             </form>
 
         </div>
-        <!-- /.login-box-body -->
+        <!-- /end.login-box-body -->
     </div>
-    <!-- /.login-box -->
+    <!-- /end.login-box -->
 
 <!-- jQuery 3 -->
 <script src="<?php echo base_url();?>assets/template/jquery/jquery.min.js"></script>

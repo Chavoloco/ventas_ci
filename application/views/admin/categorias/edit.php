@@ -40,10 +40,10 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /fin.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /fin.box -->
     </section>
-    <!-- /.content -->
+    <!-- /fin.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /fin.content-wrapper -->

@@ -23,25 +23,29 @@
                              </div>
                         <?php endif;?>
                         <form action="<?php echo base_url();?>mantenimiento/productos/store" method="POST">
-                            <div class="form-group">
+                            <div class="form-group <?php echo !empty(form_error('codigo')) ? 'has-error':''; ?>">
                                 <label for="codigo">Codigo:</label>
-                                <input type="text" class="form-control" id="codigo" name="codigo">
+                                <input type="text" class="form-control" id="codigo" name="codigo" value="<?php echo set_value('codigo');?>">
+                                <?php echo form_error("codigo","<span class='help-block'>","</span>");?>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group <?php echo !empty(form_error('nombre')) ? 'has-error':''; ?>">
                                 <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre">
+                                <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo set_value('nombre');?>">
+                                <?php echo form_error("nombre","<span class='help-block'>","</span>");?>
                             </div>
                             <div class="form-group">
                                 <label for="peso">Peso:</label>
                                 <input type="text" class="form-control" id="peso" name="peso">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group <?php echo !empty(form_error('precio_costo')) ? 'has-error':''; ?>">
                                 <label for="precio_costo">Precio de costo:</label>
-                                <input type="text" class="form-control" id="precio_costo" name="precio_costo">
+                                <input type="text" class="form-control" id="precio_costo" name="precio_costo" value="<?php echo set_value('precio_costo');?>">
+                                <?php echo form_error("precio_costo","<span class='help-block'>","</span>");?>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group <?php echo !empty(form_error('precio_venta')) ? 'has-error':''; ?>">
                                 <label for="precio_venta">Precio de venta:</label>
-                                <input type="text" class="form-control" id="precio_venta" name="precio_venta">
+                                <input type="text" class="form-control" id="precio_venta" name="precio_venta" value="<?php echo set_value('precio_venta');?>">
+                                <?php echo form_error("precio_venta","<span class='help-block'>","</span>");?>
                             </div>
                             <div class="form-group">
                                 <label for="categoria">Categoria:</label>
@@ -59,6 +63,16 @@
                                     <?php endforeach;?>
                                 </select>
                             </div>
+                            <div class="form-group <?php echo !empty(form_error('stock_minimo')) ? 'has-error':''; ?>">
+                                <label for="stock_minimo">Stock minimo:</label>
+                                <input type="text" class="form-control" id="stock_minimo" name="stock_minimo" value="<?php echo set_value('stock_minimo');?>">
+                                <?php echo form_error("stock_minimo","<span class='help-block'>","</span>");?>
+                            </div>
+                            <div class="form-group <?php echo !empty(form_error('stock')) ? 'has-error':''; ?>">
+                                <label for="stock">Stock actual:</label>
+                                <input type="text" class="form-control" id="stock" name="stock" value="<?php echo set_value('stock');?>">
+                                <?php echo form_error("stock","<span class='help-block'>","</span>");?>
+                            </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-flat">Guardar</button>
                             </div>
@@ -66,10 +80,10 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /end.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /end.box -->
     </section>
-    <!-- /.content -->
+    <!-- /end.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /end.content-wrapper -->

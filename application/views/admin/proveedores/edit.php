@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="cuit">CUIT:</label>
-                                <input type="text" class="form-control" id="cuit" name="cuit" value="<?php echo $proveedor->CUIT;?>">
+                                <input type="text" class="form-control" id="cuit" name="cuit" value="<?php echo $proveedor->cuit;?>">
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Telefono:</label>

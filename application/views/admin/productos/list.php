@@ -32,6 +32,8 @@
                                     <th>Precio de venta</th>
                                     <th>Categoria</th>
                                     <th>Marca</th>
+                                    <th>Stock minimo</th>
+                                    <th>Stock Actual</th>
                                     <th>Opciones</th>
                                 </tr>
                             </thead>
@@ -47,7 +49,9 @@
                                             <td><?php echo $producto->precio_venta;?></td>
                                             <td><?php echo $producto->categoria;?></td>
                                             <td><?php echo $producto->marca;?></td>
-                                            <?php $dataproducto = $producto->id."*".$producto->codigo."*".$producto->nombre."*".$producto->peso."*".$producto->precio_costo."*".$producto->precio_venta."*".$producto->categoria."*".$producto->marca;?>
+                                            <td><?php echo $producto->stock_minimo;?></td>
+                                            <td><?php echo $producto->stock;?></td>
+                                            <?php $dataproducto = $producto->id."*".$producto->codigo."*".$producto->nombre."*".$producto->peso."*".$producto->precio_costo."*".$producto->precio_venta."*".$producto->categoria."*".$producto->marca."*".$producto->stock_minimo."*".$producto->stock;?>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-info btn-view-producto" data-toggle="modal" data-target="#modal-default" value="<?php echo $dataproducto;?>">
@@ -65,13 +69,13 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /end.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /end.box -->
     </section>
-    <!-- /.content -->
+    <!-- /end.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /end.content-wrapper -->
 
 <div class="modal fade" id="modal-default">
   <div class="modal-dialog">
@@ -88,8 +92,8 @@
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
-    <!-- /.modal-content -->
+    <!-- /end.modal-content -->
   </div>
-  <!-- /.modal-dialog -->
+  <!-- /end.modal-dialog -->
 </div>
-<!-- /.modal -->
+<!-- /end.modal -->

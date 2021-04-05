@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="razon_social">Razon Social:</label>
-                                <input type="text" class="form-control" id="razon_social" name="razon_social" value="<?php echo $cliente->ruc;?>">
+                                <input type="text" class="form-control" id="razon_social" name="razon_social" value="<?php echo $cliente->razon_social;?>">
                             </div>
                             <!-- <div class="form-group">
                                 <label for="empresa">Empresa:</label>
@@ -55,10 +55,10 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /end.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /end.box -->
     </section>
-    <!-- /.content -->
+    <!-- /end.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /end.content-wrapper -->

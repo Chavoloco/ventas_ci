@@ -48,7 +48,7 @@ class Marcas extends CI_Controller {
 
 	public function edit($id){
 		$data  = array(
-			'marcas' => $this->Marcas_model->getMarcas($id), 
+			'marcas' => $this->Marcas_model->getMarca($id), 
 		);
 		$this->load->view("layouts/header");
 		$this->load->view("layouts/aside");
@@ -57,29 +57,28 @@ class Marcas extends CI_Controller {
 	}
 
 	public function update(){
-		$idMarcas = $this->input->post("idMarcas");
+		$idmarcas = $this->input->post("idmarcas");
 		$nombre = $this->input->post("nombre");
 
 		$data = array(
 			'nombre' => $nombre, 
-			'descripcion' => $descripcion,
 		);
 
-		if ($this->Marcas_model->update($idMarcas,$data)) {
+		if ($this->Marcas_model->update($idmarcas,$data)) {
 			redirect(base_url()."mantenimiento/marcas");
 		}
 		else{
 			$this->session->set_flashdata("error","No se pudo actualizar la informacion");
-			redirect(base_url()."mantenimiento/marcas/edit/".$idMarcas);
+			redirect(base_url()."mantenimiento/marcas/edit/".$idmarcas);
 		}
 	}
 
-	public function view($id){
-		$data  = array(
-			'marcas' => $this->Marcas_model->getMarcas($id), 
-		);
-		$this->load->view("admin/marcas/view",$data);
-	}
+	// public function view($id){
+	// 	$data  = array(
+	// 		'marcas' => $this->Marcas_model->getMarcas($id), 
+	// 	);
+	// 	$this->load->view("admin/marcas/view",$data);
+	// }
 
 	public function delete($id){
 		$data  = array(

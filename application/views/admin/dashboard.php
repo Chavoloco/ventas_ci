@@ -13,13 +13,14 @@
             <section class="content">
                 <!-- Default box -->
                 <div class="box box-solid">
-                    <div class="box-body">
+                    <!-- <div class="box-body" > -->
+                    <div class=" box-body w3-safety-purple" >
                     Bienvenido al sistema de gestión de ventas
                     </div>
-                    <!-- /.box-body -->
+                    <!-- /end.box-body -->
                 </div>
-                <!-- /.box -->
+                <!-- /end.box -->
             </section>
-            <!-- /.content -->
+            <!-- /end.content -->
         </div>
-        <!-- /.content-wrapper -->
+        <!-- /end.content-wrapper -->

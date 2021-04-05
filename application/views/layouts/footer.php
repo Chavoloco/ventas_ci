@@ -25,6 +25,7 @@
 <script>
 $(document).ready(function () {
     var base_url= "<?php echo base_url();?>";
+
     $(".btn-remove").on("click", function(e){
         e.preventDefault();
         var ruta = $(this).attr("href");
@@ -38,21 +39,6 @@ $(document).ready(function () {
             }
         });
     });
-    $(".btn-view-producto").on("click", function(){
-        var producto = $(this).val(); 
-        //alert(productos);
-        var infoproducto = producto.split("*");
-        html = "<p><strong>Id:</strong>"+infoproducto[0]+"</p>"
-        html = "<p><strong>Codigo:</strong>"+infoproducto[1]+"</p>"
-        html += "<p><strong>Nombre:</strong>"+infoproducto[2]+"</p>"
-        html += "<p><strong>Descripcion:</strong>"+infoproducto[3]+"</p>"
-        html += "<p><strong>Precio:</strong>"+infoproducto[4]+"</p>"
-        html += "<p><strong>Stock:</strong>"+infoproducto[5]+"</p>"
-        html += "<p><strong>Categoria:</strong>"+infoproducto[6]+"</p>";
-        html += "<p><strong>Marca:</strong>"+infoproducto[7]+"</p>"
-        $("#modal-default .modal-body").html(html);
-    });
-  
     $(".btn-view-cliente").on("click", function(){
         var cliente = $(this).val(); 
         //alert(cliente);
@@ -64,6 +50,23 @@ $(document).ready(function () {
         html += "<p><strong>Razon Social:</strong>"+" "+infocliente[5]+"</p>"
         $("#modal-default .modal-body").html(html);
     });
+    $(".btn-view-producto").on("click", function(){
+        var producto = $(this).val(); 
+        //alert(productos);
+        var infoproducto = producto.split("*");
+        html = "<p><strong>Id:</strong>"+infoproducto[0]+"</p>"
+        html = "<p><strong>Codigo:</strong>"+infoproducto[1]+"</p>"
+        html += "<p><strong>Nombre:</strong>"+infoproducto[2]+"</p>"
+        html += "<p><strong>Descripcion:</strong>"+infoproducto[3]+"</p>"
+        html += "<p><strong>Precio de costo:</strong>"+infoproducto[4]+"</p>"
+        html += "<p><strong>Precio de venta:</strong>"+infoproducto[5]+"</p>"
+        html += "<p><strong>Categoria:</strong>"+infoproducto[6]+"</p>";
+        html += "<p><strong>Marca:</strong>"+infoproducto[7]+"</p>"
+        html += "<p><strong>Stock minimo:</strong>"+infoproducto[8]+"</p>";
+        html += "<p><strong>Stock actual:</strong>"+infoproducto[9]+"</p>"
+        $("#modal-default .modal-body").html(html);
+    });
+  
     $(".btn-view-proveedor").on("click", function(){
         var proveedor = $(this).val(); 
         //alert(proveedor);
@@ -75,30 +78,28 @@ $(document).ready(function () {
         html += "<p><strong>Teléfono:</strong>"+" "+infoproveedor[4]+"</p>"
         $("#modal-default .modal-body").html(html);
     });
+    $(".btn-view-marcas").on("click", function(){
+        var marcas = $(this).val(); 
+        //alert(marcas);
+        var infomarcas = marcas.split("*");
+        html = "<p><strong>Id:</strong>"+" "+infomarcas[0]+"</p>"
+        html = "<p><strong>Nombre:</strong>"+" "+infomarcas[1]+"</p>"
+        $("#modal-default .modal-body").html(html);
+    });
     $(".btn-view").on("click", function(){
         var id = $(this).val();
         $.ajax({
             url: base_url + "mantenimiento/categorias/view/" + id,
             type:"POST",
             success:function(resp){
-                $("#modal-default .modal-body").html(resp);
-                //alert(resp);
+                 $("#modal-default .modal-body").html(resp);
+                // alert(resp);
             }
 
         });
-        $(".btn-view").on("click", function(){
-        var id = $(this).val();
-        $.ajax({
-            url: base_url + "mantenimiento/marcas/view/" + id,
-            type:"POST",
-            success:function(resp){
-                $("#modal-default .modal-body").html(resp);
-                //alert(resp);
-            }
-
-        });
-
     });
+   
+
 	$('#example1').DataTable({
         "language": {
             "lengthMenu": "Mostrar _MENU_ registros por pagina",

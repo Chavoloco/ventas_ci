@@ -61,13 +61,13 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /end.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /end.box -->
     </section>
-    <!-- /.content -->
+    <!-- /end.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /end.content-wrapper -->
 
 <div class="modal fade" id="modal-default">
   <div class="modal-dialog">
@@ -84,8 +84,8 @@
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
-    <!-- /.modal-content -->
+    <!-- /end.modal-content -->
   </div>
-  <!-- /.modal-dialog -->
+  <!-- /end.modal-dialog -->
 </div>
-<!-- /.modal -->
+<!-- /end.modal -->

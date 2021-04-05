@@ -77,8 +77,8 @@
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
-    <!-- /.modal-content -->
+    <!-- /fin.modal-content -->
   </div>
-  <!-- /.modal-dialog -->
+  <!-- /fin.modal-dialog -->
 </div>
-<!-- /.modal -->
+<!-- /fin.modal -->

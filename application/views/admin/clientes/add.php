@@ -54,10 +54,10 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /end.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /end.box -->
     </section>
-    <!-- /.content -->
+    <!-- /end.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /end.content-wrapper -->

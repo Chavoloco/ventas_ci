@@ -22,7 +22,7 @@
                              </div>
                         <?php endif;?>
                         <form action="<?php echo base_url();?>mantenimiento/marcas/update" method="POST">
-                            <input type="hidden" value="<?php echo $marcas->id;?>" name="idmarcas">
+                            <input type="hidden" name="idmarcas" value="<?php echo $marcas->id;?>" >
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $marcas->nombre?>">
@@ -34,10 +34,10 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-body -->
+            <!-- /fin.box-body -->
         </div>
-        <!-- /.box -->
+        <!-- /fin.box -->
     </section>
-    <!-- /.content -->
+    <!-- /fin.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /fin.content-wrapper -->
